@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seshanth Heerekar — Finance & Accounts Professional</title>
+  <meta name="description" content="Seshanth Heerekar — Finance & Accounts professional based in London. ACCA student and MBA graduate with 7+ years' experience in AP/AR, reconciliations, reporting and financial controls." />
+  <link rel="icon" href="" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F5F1EA;
+      --ink: #1A1814;
+      --muted: #6B6760;
+      --gold: #C9A84C;
+      --gold-light: #E8D5A3;
+      --rule: rgba(26,24,20,0.12);
+      --card-bg: #FDFAF5;
+      --max-width: 1100px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(245,241,234,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 0.5px solid var(--rule);
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.05rem; letter-spacing: 0.02em; }
+    .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-actions { display:flex; gap:0.8rem; align-items:center; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 0 2rem;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -40px; right: -80px;
+      width: 560px; height: 560px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-text { max-width: 680px; }
+    .hero-eyebrow {
+      font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block; width: 32px; height: 1px; background: var(--gold);
+    }
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 600;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+    .hero-name em { font-style: italic; color: var(--gold); font-weight: 400; }
+    .hero-tagline {
+      font-size: 1rem; color: var(--muted); line-height: 1.8;
+      max-width: 540px; margin-bottom: 1.6rem;
+    }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; align-items:center; }
+    .btn {
+      display: inline-block; padding: 0.75rem 1.6rem;
+      font-size: 0.86rem; letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none; border-radius: 4px; cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--ink); color: var(--cream); border: 1px solid var(--ink);
+      transition: all 0.2s;
+    }
+    .btn-primary:hover { background: transparent; color: var(--ink); }
+    .btn-outline {
+      background: transparent; color: var(--ink); border: 1px solid var(--rule);
+    }
+    .hero-right { display:flex; justify-content:flex-end; align-items:center; }
+    .hero-card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--rule);
+      padding: 2rem;
+      width: 320px;
+      position: relative;
+    }
+    .hero-card::before {
+      content: ''; position: absolute;
+      top: 12px; left: 12px; right: -12px; bottom: -12px;
+      border: 0.5px solid var(--gold-light);
+      z-index: -1;
+    }
+    .hc-avatar {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(135deg, #C9A84C22, #C9A84C55);
+      border: 1.5px solid var(--gold-light);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .hc-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 0.2rem; }
+    .hc-sub { font-size: 0.78rem; color: var(--muted); margin-bottom: 1.1rem; letter-spacing: 0.03em; }
+    .hc-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 0.5px solid var(--rule); padding-top: 1rem; }
+    .hc-stat .n { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold); line-height: 1; }
+    .hc-stat .l { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 3px; }
+
+    /* SECTIONS */
+    main { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
+    section { padding: 4rem 0; }
+    .container { max-width: 960px; margin: 0 auto; }
+    .section-header { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2.4rem; }
+    .section-num { font-family: 'Playfair Display', serif; font-size: 0.85rem; color: var(--gold); font-style: italic; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 400; }
+    .section-rule { flex: 1; height: 0.5px; background: var(--rule); }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: start; }
+    .about-text p { color: var(--muted); line-height: 1.9; margin-bottom: 1rem; font-size: 0.95rem; }
+    .about-text p strong { color: var(--ink); font-weight: 500; }
+    .about-facts { display: flex; flex-direction: column; gap: 1px; }
+    .fact-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.9rem 0; border-bottom: 0.5px solid var(--rule);
+      font-size: 0.85rem;
+    }
+    .fact-row .key { color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; }
+    .fact-row .val { color: var(--ink); font-weight: 400; text-align: right; }
+
+    /* EXPERIENCE */
+    .exp-list { display: flex; flex-direction: column; gap: 0.4rem; }
+    .exp-item {
+      display: grid; grid-template-columns: 180px 1fr;
+      gap: 1.2rem; padding: 1.2rem 0;
+      border-bottom: 0.5px solid var(--rule);
+      background: transparent; cursor: pointer;
+    }
+    .exp-item[tabindex] { outline: none; }
+    .exp-item:focus { box-shadow: 0 0 0 3px rgba(201,168,76,0.12); border-radius: 6px; }
+    .exp-meta { padding-top: 0.2rem; }
+    .exp-dates { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.6; }
+    .exp-loc { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+    .exp-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin-top: 0.85rem; margin-bottom: 0.5rem; }
+    .exp-content { }
+    .exp-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 3px; }
+    .exp-company { font-size: 0.82rem; color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .exp-bullets {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, opacity 0.25s;
+      opacity: 0;
+    }
+    .exp-bullets.open { max-height: 400px; opacity: 1; margin-top: 0.8rem; }
+    .exp-bullets ul { padding-left: 1rem; margin: 0.2rem 0; }
+    .exp-bullets li { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.4rem; line-height: 1.6; }
+    .exp-toggle { font-size: 0.72rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem; }
+
+    /* SKILLS */
+    .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .skill-group h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 0.5px solid var(--rule); }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.75rem; }
+    .tag {
+      font-size: 0.78rem; padding: 6px 12px;
+      border: 0.5px solid var(--rule);
+      color: var(--muted); background: var(--card-bg);
+      transition: all 0.18s;
+      border-radius: 6px;
+    }
+    .tag:hover { border-color: var(--gold); color: var(--ink); }
+
+    /* EDUCATION */
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .edu-card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--rule);
+      padding: 1.2rem;
+      position: relative; overflow: hidden;
+    }
+    .edu-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px; background: linear-gradient(90deg, var(--gold), transparent);
+    }
+    .edu-deg { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 0.4rem; }
+    .edu-field { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+    .edu-uni { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); }
+    .edu-yr { font-size: 0.75rem; color: var(--muted); margin-top: 0.3rem; }
+
+    /* CERTS, AWARDS */
+    .certs-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .cert-item {
+      padding: 1rem 1.2rem;
+      background: var(--card-bg);
+      border-left: 2px solid var(--gold);
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .award-card {
+      text-align: center; padding: 1.2rem 1rem;
+      border: 0.5px solid var(--rule);
+      background: var(--card-bg);
+      transition: border-color 0.2s;
+    }
+    .award-card:hover { border-color: var(--gold); }
+    .award-icon { font-size: 1.4rem; color: var(--gold); margin-bottom: 0.5rem; }
+    .award-title { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+    .award-year { font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* CONTACT */
+    .contact-section { background: var(--ink); color: var(--cream); padding: 3.2rem 0; border-radius: 8px; }
+    .contact-section .section-title { color: var(--cream); }
+    .contact-section .section-rule { background: rgba(245,241,234,0.15); }
+    .contact-section .section-num { color: var(--gold); }
+    .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items: start; }
+    .contact-intro { font-size: 0.95rem; color: rgba(245,241,234,0.75); line-height: 1.9; margin-bottom: 1rem; }
+    .contact-items { display: flex; flex-direction: column; gap: 0.4rem; }
+    .contact-row {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 0.7rem 0; border-bottom: 0.5px solid rgba(245,241,234,0.06);
+      font-size: 0.88rem; color: rgba(245,241,234,0.9);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-row:hover { color: var(--gold); }
+    .contact-row .ci { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); min-width: 80px; }
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .lang-item { padding: 0.8rem; border: 0.5px solid rgba(245,241,234,0.06); }
+    .lang-name { font-size: 0.88rem; color: var(--cream); }
+    .lang-level { font-size: 0.72rem; color: rgba(245,241,234,0.5); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    footer {
+      background: var(--ink); color: rgba(245,241,234,0.3);
+      text-align: center; font-size: 0.75rem; padding: 1.2rem;
+      border-top: 0.5px solid rgba(245,241,234,0.08);
+      letter-spacing: 0.05em;
+      margin-top: 2rem;
+    }
+
+    /* small */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding: 5rem 1.2rem 3rem; gap: 2.4rem; }
+      .hero-right { justify-content: center; }
+      .about-grid, .contact-grid, .edu-grid, .skills-layout { grid-template-columns: 1fr; gap: 1.2rem; }
+      .exp-item { grid-template-columns: 1fr; gap: 0.6rem; }
+      .exp-meta { display:flex; gap:1rem; align-items:center; }
+    }
+    @media (max-width: 480px) {
+      nav { padding: 0.75rem 1rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-logo">Seshanth Heerekar</div>
+    <div class="nav-actions" aria-hidden="false">
+      <div class="nav-links" role="menubar">
+        <a href="#about" role="menuitem">About</a>
+        <a href="#experience" role="menuitem">Experience</a>
+        <a href="#skills" role="menuitem">Skills</a>
+        <a href="#education" role="menuitem">Education</a>
+        <a href="#contact" role="menuitem">Contact</a>
+      </div>
+      <a class="btn btn-outline" href="mailto:seshanth93@gmail.com" aria-label="Email Seshanth">Email</a>
+      <a class="btn btn-primary" href="mailto:seshanth93@gmail.com?subject=Opportunity">Get in touch</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Finance & Accounts Professional</div>
+      <h1 class="hero-name">Seshanth<br><em>Heerekar</em></h1>
+      <p class="hero-tagline">Pursuing ACCA · MBA Graduate · 7+ years in AP/AR, reconciliations, reporting and financial controls. Seeking finance and administrative roles across the UK.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#experience">View Experience</a>
+        <a class="btn btn-outline" href="#contact">Get in Touch</a>
+        <!-- Replace href with a link to your CV file in the repo or hosting -->
+        <a class="btn" style="border:1px solid var(--rule);" href="/resume.pdf" aria-label="Download CV">Download CV</a>
+      </div>
+    </div>
+
+    <div class="hero-right" aria-hidden="false">
+      <aside class="hero-card" aria-label="Profile summary">
+        <div class="hc-avatar" aria-hidden="true">SH</div>
+        <div class="hc-name">Seshanth Heerekar</div>
+        <div class="hc-sub">London, United Kingdom · Available for roles</div>
+        <div class="hc-stats" role="list" aria-label="Key facts">
+          <div class="hc-stat" role="listitem"><div class="n">7+</div><div class="l">Years exp.</div></div>
+          <div class="hc-stat" role="listitem"><div class="n">10×</div><div class="l">Star awards</div></div>
+          <div class="hc-stat" role="listitem"><div class="n">MBA</div><div class="l">UEL 2025</div></div>
+          <div class="hc-stat" role="listitem"><div class="n">ACCA</div><div class="l">In progress</div></div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 id="about-title" class="section-title">About</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I am a forward-thinking finance professional with over seven years of experience in accounting, financial controls and finance-led solution delivery. I have worked across diverse organisations to improve controls, reporting and operational finance processes.</p>
+          <p>Recognised as Key Performer of the Year (2017) and Best Employee of the Month on multiple occasions, I have a demonstrable track record of delivering accurate and timely financial operations, driving improvement initiatives and collaborating with cross-functional teams to achieve targets.</p>
+          <p>Currently completing my ACCA qualification and recently graduated with an MBA from the University of East London, I am actively seeking finance and administrative roles across the UK where I can contribute strong technical accounting skills, process discipline and a solutions mindset.</p>
+        </div>
+        <div class="about-facts" aria-hidden="false">
+          <div class="fact-row"><span class="key">Location</span><span class="val"><a href="tel:07377991837">07377 991837</a></span></div>
+          <div class="fact-row"><span class="key">Phone</span><span class="val"><a href="tel:07377991837">07377 991837</a></span></div>
+          <div class="fact-row"><span class="key">Email</span><span class="val"><a href="mailto:seshanth93@gmail.com">seshanth93@gmail.com</a></span></div>
+          <div class="fact-row"><span class="key">LinkedIn</span><span class="val"><a href="https://linkedin.com/in/seshanth-h" target="_blank" rel="noopener noreferrer">linkedin.com/in/seshanth-h</a></span></div>
+          <div class="fact-row"><span class="key">Availability</span><span class="val">Open to opportunities</span></div>
+          <div class="fact-row"><span class="key">Qualification</span><span class="val">ACCA (in progress)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" style="background: var(--card-bg);" aria-labelledby="experience-title">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 id="experience-title" class="section-title">Experience</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="exp-list" role="list">
+        <div class="exp-item" tabindex="0" role="listitem" aria-expanded="false" onclick="toggleExp(this)" onkeydown="handleExpKey(event,this)">
+          <div class="exp-meta">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-dates">Sep 2025 – Present<br>7 months</div>
+            <div class="exp-loc">Esher, UK</div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-title">Accounts Manager</div>
+            <div class="exp-company">Audley Chaucer Solicitors</div>
+            <div class="exp-toggle">+ View details</div>
+            <div class="exp-bullets">
+              <ul>
+                <li>Manage client accounts and daily financial operations for the firm.</li>
+                <li>Ensure compliance with SRA Accounts Rules across all accounting processes.</li>
+                <li>Oversee accounts payable/receivable, bank reconciliations and month-end close activities.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item" tabindex="0" role="listitem" aria-expanded="false" onclick="toggleExp(this)" onkeydown="handleExpKey(event,this)">
+          <div class="exp-meta">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-dates">Jan 2024 – Sep 2025<br>1 yr 9 months</div>
+            <div class="exp-loc">London, UK</div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-title">Junior Financial Controller</div>
+            <div class="exp-company">Transladiem</div>
+            <div class="exp-toggle">+ View details</div>
+            <div class="exp-bullets">
+              <ul>
+                <li>Managed timely processing, reconciliation and reporting of invoices to maintain vendor relationships.</li>
+                <li>Monitored collections, client accounts and accurate invoicing to optimise cash flow.</li>
+                <li>Delivered financial reports, performed variance analysis and supported management decision-making.</li>
+                <li>Helped implement internal controls and regulatory compliance processes.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item" tabindex="0" role="listitem" aria-expanded="false" onclick="toggleExp(this)" onkeydown="handleExpKey(event,this)">
+          <div class="exp-meta">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-dates">Sep 2023 – May 2025</div>
+            <div class="exp-loc">London, UK</div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-title">MBA Student</div>
+            <div class="exp-company">University of East London</div>
+            <div class="exp-toggle">+ View details</div>
+            <div class="exp-bullets">
+              <ul>
+                <li>Completed MBA in Business Administration and Management with a focus on finance and operations.</li>
+                <li>Studied strategic finance, business operations and management principles applied to real business cases.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item" tabindex="0" role="listitem" aria-expanded="false" onclick="toggleExp(this)" onkeydown="handleExpKey(event,this)">
+          <div class="exp-meta">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-dates">Apr 2020 – Aug 2023<br>3 yrs 5 months</div>
+            <div class="exp-loc">Hyderabad, India</div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-title">FSD City SPOC &amp; FSD Expert</div>
+            <div class="exp-company">NoBrokerHood</div>
+            <div class="exp-toggle">+ View details</div>
+            <div class="exp-bullets">
+              <ul>
+                <li>Deployed financial solutions to digitise apartment and society finance operations.</li>
+                <li>Delivered product demos and trained committee members to increase adoption.</li>
+                <li>Managed weekly target vs achievement reporting and supported business development.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item" tabindex="0" role="listitem" aria-expanded="false" onclick="toggleExp(this)" onkeydown="handleExpKey(event,this)">
+          <div class="exp-meta">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-dates">Jun 2018 – Mar 2020<br>1 yr 10 months</div>
+            <div class="exp-loc">Hyderabad, India</div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-title">Senior Accountant</div>
+            <div class="exp-company">Novus Green Energy Systems</div>
+            <div class="exp-toggle">+ View details</div>
+            <div class="exp-bullets">
+              <ul>
+                <li>Recorded sales and purchase entries in Tally and Microsoft Dynamics.</li>
+                <li>Managed cash transactions, reconciliations and prepared BRS statements.</li>
+                <li>Coordinated vendor relations and processed job advances.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item" tabindex="0" role="listitem" aria-expanded="false" onclick="toggleExp(this)" onkeydown="handleExpKey(event,this)">
+          <div class="exp-meta">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-dates">Feb 2017 – Jun 2018<br>1 yr 5 months</div>
+            <div class="exp-loc">Hyderabad, India</div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-title">Senior Accountant</div>
+            <div class="exp-company">NEXGEN Logistics Pvt Ltd</div>
+            <div class="exp-toggle">+ View details</div>
+            <div class="exp-bullets">
+              <ul>
+                <li>Led team operations, trained new hires and drove process improvements.</li>
+                <li>Managed entries using Tally ERP9; ensured statutory compliance (ESI, PF, PT, TDS).</li>
+                <li>Conducted internal audits and created weekly/monthly dashboards for leadership.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item" tabindex="0" role="listitem" aria-expanded="false" onclick="toggleExp(this)" onkeydown="handleExpKey(event,this)">
+          <div class="exp-meta">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-dates">Oct 2013 – Jan 2017<br>3 yrs 4 months</div>
+            <div class="exp-loc">Hyderabad, India</div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-title">Account Executive</div>
+            <div class="exp-company">Garudavega Delivery Services Pvt Ltd</div>
+            <div class="exp-toggle">+ View details</div>
+            <div class="exp-bullets">
+              <ul>
+                <li>Managed sales, purchases, BRS and journal entries in Tally.</li>
+                <li>Handled daily cash operations and agent collections; processed statutory filings.</li>
+                <li>Managed vendor payments, inventory control, and commission reporting.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 id="skills-title" class="section-title">Skills</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="skills-layout">
+        <div>
+          <div class="skill-group" role="region" aria-label="Accounting skills">
+            <h3>Accounting & Finance</h3>
+            <div class="skill-tags">
+              <span class="tag">Accounts Payable</span>
+              <span class="tag">Accounts Receivable</span>
+              <span class="tag">Bank Reconciliation</span>
+              <span class="tag">Financial Reporting</span>
+              <span class="tag">Variance Analysis</span>
+              <span class="tag">Internal Controls</span>
+              <span class="tag">Audit Readiness</span>
+              <span class="tag">Cash Flow Management</span>
+              <span class="tag">Statutory Compliance</span>
+            </div>
+          </div>
+
+          <div class="skill-group" style="margin-top:1rem;" role="region" aria-label="Soft skills">
+            <h3>Soft Skills</h3>
+            <div class="skill-tags">
+              <span class="tag">Team Leadership</span>
+              <span class="tag">Client Management</span>
+              <span class="tag">Cross-functional Collaboration</span>
+              <span class="tag">Training & Mentoring</span>
+              <span class="tag">Analytical Thinking</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="skill-group" role="region" aria-label="Tools">
+            <h3>Software & Tools</h3>
+            <div class="skill-tags">
+              <span class="tag">Microsoft Excel</span>
+              <span class="tag">SAP Business One</span>
+              <span class="tag">Microsoft Dynamics 365</span>
+              <span class="tag">Xero</span>
+              <span class="tag">QuickBooks</span>
+              <span class="tag">Tally ERP9</span>
+            </div>
+          </div>
+
+          <div class="skill-group" style="margin-top:1rem;" role="region" aria-label="Languages">
+            <h3>Languages</h3>
+            <div class="skill-tags">
+              <span class="tag">English — Professional</span>
+              <span class="tag">Hindi — Native</span>
+              <span class="tag">Telugu — Professional</span>
+              <span class="tag">Marathi — Limited</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" style="background: var(--card-bg);" aria-labelledby="education-title">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 id="education-title" class="section-title">Education</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-deg">Master of Business Administration</div>
+          <div class="edu-field">Business Administration & Management</div>
+          <div class="edu-uni">University of East London</div>
+          <div class="edu-yr">Sep 2023 – May 2025</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-deg">Bachelor of Commerce</div>
+          <div class="edu-field">Accounting & Finance</div>
+          <div class="edu-uni">Osmania University</div>
+          <div class="edu-yr">2011 – 2014</div>
+        </div>
+      </div>
+
+      <div style="margin-top:1.2rem;">
